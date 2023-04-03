@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/task_bg"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tasksText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="32sp"
+            android:text="Tasks" />
+
+    <LinearLayout
+        android:id="@+id/tskLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tasksText">
+
+        <TextView
+            android:id="@+id/LoginEmail"
+            android:layout_width="225dp"
+            android:background="@drawable/edt_txt_shape"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="user  id"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Logout"
+            android:background="@drawable/btn_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="logout"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:nestedScrollingEnabled="true"
+        android:layout_below="@id/tskLayout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/bg"
+        android:src="@drawable/ic_baseline_add_24" />
+
+</RelativeLayout>
